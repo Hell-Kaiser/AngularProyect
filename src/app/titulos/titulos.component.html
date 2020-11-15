@@ -1,0 +1,39 @@
+<!-- <p>El alumno se llama {{alumno.nombre}} con apellido {{alumno.apellido}}</p>
+<p>La edad del alumno es {{alumno.edad}}</p>
+
+<input type="text" [(ngModel)]="inputNuevo">
+<p>{{inputNuevo}}</p> -->
+
+<label for="">Correo:
+    <input type="text" [(ngModel)]="correo">
+</label>
+
+<label for="">Password:
+    <input type="password" (keydown)="ingresar($event)" [(ngModel)]="password">
+</label>
+
+<!-- <label for="">Password:
+    <input type="password" (ngModelChange)="escribirModelo()" [(ngModel)]="password">
+</label> -->
+
+<!--Cuando da clic se activa esa función que va a mostrar
+las variables almacenadas-->
+
+<button (dblclick)="ingresar($event)">Iniciar</button>
+
+<br>
+<br>
+
+<!--El input trae un monton de información
+para acceder al valor debemos ingresar a la propiedad target
+y luego escogemos el value
+
+Puedes utilizar solo el $event para mirar todo lo que trae
+En el console, debes poner igualmente el event (sin el $)
+-->
+<!-- <input type="text" (input)="escribir($event.target.value)"> -->
+
+<!-- <input type="text" (focus)="cambiarEstilo($event)"> -->
+
+<img src="https://openthread.google.cn/images/ot-contrib-google.png" 
+(mouseenter)="cambiarTamano($event)" (mouseleave)="aumentarTamano($event)" alt="">
